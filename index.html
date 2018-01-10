@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GisDay ČVUT 2017</title>
+    <title>Geomatika u piva vol. 5</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono);
@@ -15,122 +15,90 @@
 
 class: center, middle
 
-# GIS v Českém rozhlase
+# Pozemky bez vlastníků
+
 ![logo iROZHLAS.cz](img/logo.jpg)
+
+### Jan Cibulka, [@jancibulka](https://twitter.com/jancibulka)
 ---
 
-# Volební mapy
+# Kam jdou zemědělské dotace?
 
-[Podrobná mapa: ANO bralo všude, Zelení dostali výprask i od vlastních](https://www.irozhlas.cz/volby/volby-2017-ano-uspech-prohra-zeleni-mapa-vysledku_1710230600_cib)
+Vloni [130 miliard Kč](https://www.novinky.cz/ekonomika/431036-dotace-a-velke-zisky-ceske-zemedelstvi-zaziva-zlate-casy.html).
 
-![rozdílová mapa](img/rozdilovka.jpg)
+Zveřejňují se jen [poslední dva roky](https://www.szif.cz/cs/seznam-prijemcu-dotaci) (starší _se z webu mažou_), a chybí propojení pěnez a konkrétní půdy.
 
-Data: [ČSÚ](https://volby.cz)
+A ne všichni hrajou fér, např. [Sklízel dotace na cizí pozemky. Vlastník mlčel, hájí se úředníci](https://www.novinky.cz/domaci/414457-sklizel-dotace-na-cizi-pozemky-vlastnik-mlcel-haji-se-urednici.html)
 ---
 
-# Volební mapy
+# Proč zrovna Agrofert?
 
-[Podívejte se, kdo zvolil vašeho senátora. Přinášíme výsledky druhého kola okrsek po okrsku](https://interaktivni.rozhlas.cz/senatni-volby-v-okrscich/)
+Modelový případ:
+  * Je velký (asi [3 % půdy ČR](https://cs.wikipedia.org/wiki/Agrofert)), může jít o dost peněz.
+  * [~~Vlastní~~](https://ekonomika.idnes.cz/babis-akcie-sverenske-fondy-dfv-/ekonomika.aspx?c=A170203_122224_ekonomika_jj) ho exministr financí, premiér, majitel velkého vydavatelství, miliardář. A [exagent StB](https://zpravy.idnes.cz/andrej-babis-ustav-pameti-naroda-stb-d7j-/zahranicni.aspx?c=A171012_092835_zahranicni_jj).
+  * I neúplné veřejné evidentce u holdingu [evidují](https://dotacni-parazit.cz/konsolidace-holdingy/detail/18) přes 3 mld. Kč dotací.
 
-![rozdílová mapa](img/senat_okrsky.jpg)
-
-Data: [ČSÚ](https://volby.cz)
+Existuje tedy __silný veřejný zájem__ to zkontrolovat.
 ---
 
-# Korigujem politiky
+# Co je Agrofert?
 
-[Datlík i tetřev z Šumavy zmizeli, tvrdí Zeman. Naopak se jim daří, oponují ornitologové](https://www.irozhlas.cz/veda-technologie/priroda/datlik-i-tetrev-z-sumavy-zmizeli-tvrdi-zeman-naopak-se-jim-dari-oponuji_1706131430_cib)
+_přes 250 firem_
 
-![rozdílová mapa](img/datlik.jpg)
+[79 firem v obchodním rejstříku, kde je uvedený Agrofert jako statutár](https://or.justice.cz/ias/ui/rejstrik-$spolecnici?p%3A%3Asubmit=x&.%2Frejstrik-%24spolecnici=&nazev=&ico=26185610&obec=&ulice=&polozek=500&typHledani=STARTS_WITH&jenPlatne=PLATNE)
 
-Data: [faunistická databáze AVIF](http://www.birds.cz/avif/)
+Konsolidace je ale hlavně [ruční práce](https://dotacni-parazit.cz/konsolidace-holdingy/detail/18).
 ---
 
-# Sledujeme bezpečnost...
+# LPIS (má [opendata](http://eagri.cz/public/app/eagriapp/lpisdata/))
 
-[Data strážníků: bezpečný 'Bronx' i bezdomovectví jako životní styl](https://www.irozhlas.cz/zpravy-domov/data-mestske-policie-bezpecny-bronx-problemovi-tricatnici-i-bezdomovectvi-jako_1707210600_jab)
+![lpis](img/lpis.jpg)
 
-![rozdílová mapa](img/mpb.jpg)
-
-Data: [MP Brno](https://www.mpb.cz/)
+Z XML exportů lze vyčíst (kromě jiného) hospodařící subjekt a geometrie _půdních bloků_.
 ---
 
-# ...i dopravu
+# Katastr (má [RÚIAN](http://vdp.cuzk.cz/vdp/ruian/vymennyformat/vyhledej))
 
-[Nové modré zóny: stovky pokut rozdává auto s kamerami](https://interaktivni.rozhlas.cz/modre-zony-v-praze/)
+Překrytím katastru půdními bloky získáme parcely ve správě jednotlivých společností holdingu.
 
-![rozdílová mapa](img/mpp_parkovani.jpg)
-
-Data: [MP Praha](http://www.mppraha.cz/)
+![pozemky Agrofert](img/pozemky_afert.jpg)
 ---
 
-# ...i dopravu
+# Čí jsou ty pozemky? Nevíme :(
 
-[Mapa: Kolik nehod zaviní zanedbané silnice?](https://interaktivni.rozhlas.cz/data/rozbite-silnice/www/)
+Ale víme, čí pozemky [_nejsou ničí_](https://www.uzsvm.cz/nedostatecne-urcite-identifikovani-vlastnici-2138-0-85/) 
 
-![rozdílová mapa](img/nehody.jpg)
+![pozemky Agrofert](img/pozemky_afert.jpg)
 
-Data: [Policie ČR](http://maps.jdvm.cz/cdv2/apps/nehodynalokalite/Search.aspx)
 ---
 
-# Píšeme o městech...
+# Novinařina
 
-[Brno ve sporu s Českou poštou. Pobočky jsou o víkendu ve dvou třetinách města zavřené](https://www.irozhlas.cz/zpravy-domov/brno-ve-sporu-s-ceskou-postou-pobocky-jsou-o-vikendu-ve-dvou-tretinach-mesta-zavrene_201702201059_jbocek)
+Ptáme se právníků, zemědělců, Agrofertu, dalších zemědělců, dalších právníků, objíždíme některé podniky v holdingu. Jde o 1 700 ha, v dotacích asi 10 milionů ročně.
 
-![rozdílová mapa](https://samizdat.cz/data/posta-brno/charts/mapa.png)
+![pkolaz](img/kolaz.jpg)
+
+[Agrofert neoprávněně hospodaří na 1700 hektarech...](https://www.irozhlas.cz/zpravy-domov/agrofert-dotace-holding-zemedelstvi-puda_1711280600_jra)
+
+[Hlídáme státu peníze...](https://www.irozhlas.cz/komentare/agrofert-dotace-zemedelska-puda-podvod_1711280700_cib)
 ---
 
-# Píšeme o městech...
+# ...poločas...
 
-[Mapa: Kolika cyklistů by se dotkl zákaz projíždět přes den centrem Prahy?](https://www.irozhlas.cz/zpravy-domov/mapa-kolika-cyklistu-se-dotkl-zakaz-projizdet-pres-den-centrem-prahy_1706010600_pek)
+![PL Kňourek](img/dozvuky_kol.jpg)
 
-![rozdílová mapa](https://www.irozhlas.cz/sites/default/files/styles/zpravy_clanek_telo_4_3/public/uploader/snimek_obrazovky_201_170530-191328_pek.png?itok=XJeZB-QS)
+[Politicky nekorektní mediální radní promluvil](https://www.parlamentnilisty.cz/arena/monitor/To-co-minuly-tyden-predvedli-investigativci-Ceskeho-rozhlasu-Pry-na-tom-delali-nekolik-tydnu-A-ta-nahoda-kdy-to-zverejnili-Politicky-nekorektni-medialni-radni-promluvil-514703)
 
-Data [UrbanCyclers](https://medium.com/urbancyclerscz/analyza-zakaz-cyklistu-praha-387f98a69672)
+[Deset šéfredaktorů se zastalo Janka Kroupy, řediteli ČRo poslali otevřený dopis](https://echo24.cz/a/SZBAT/deset-sefredaktoru-se-zastalo-janka-kroupy-rediteli-cro-poslali-otevreny-dopis)
+
+[Šéfredaktoři píší řediteli ČRo...](https://www.mediaguru.cz/clanky/2017/12/sefredaktori-pisi-rediteli-cro-v-kauze-janka-kroupy/)
 ---
 
-# Píšeme o městech...
+# A co dál?
 
-[Mapa: Jde to i bez lítačky. Podívejte se, kde budete pěšky rychleji než metrem](https://interaktivni.rozhlas.cz/metro-chuze/)
+SZIF začíná poskytovat [data](https://dotacni-parazit.cz/program-rozvoje-venkova), dokonce i informace o čerpaných dotacích na konkrétní plochu. Průzkum pokračuje ;)
 
-![rozdílová mapa](https://interaktivni.rozhlas.cz/metro-chuze/media/metro_chuze.jpg)
----
-
-# ...i vesnicích
-
-[Odříznuté od světa: 161 obcí, kam o víkendu nejede vlak ani autobus](https://interaktivni.rozhlas.cz/obce-bez-mhd/)
-
-![rozdílová mapa](img/odriznute.jpg)
----
-
-# ...i vesnicích
-
-[Velká mapa rodáků: kde jsou lidé věrní své obci](https://www.irozhlas.cz/zpravy-domov/velka-mapa-rodaku-kde-jsou-lide-verni-sve-obci_1704190600_cib)
-
-![rozdílová mapa](img/rodaci.jpg)
----
-
-# Ekologická témata
-
-[Koncentrace prachu na čtvrtině stanic byla loni vyšší, než povoluje zákon. Podívejte se, jak se dýchá u vás](https://interaktivni.rozhlas.cz/smog-2016/)
-
-![rozdílová mapa](img/prach.jpg)
-
-Data [ČHMÚ](http://portal.chmi.cz/)
----
-
-# Ekologická témata
-
-[Spočítejte si, kolik ušetříte s dešťovou vodou](https://www.irozhlas.cz/veda-technologie/voda/tyden-vody-spocitejte-si-kolik-usetrite-s-destovou-vodou_1706191124_cib)
-
-![rozdílová mapa](img/destovka.jpg)
----
-
-# Ale umíme to i s tužkou ;)
-
-[Ani 30, ani 20 tisíc. Spočítali jsme demonstranty proti Babišovi](https://www.irozhlas.cz/zpravy-domov/ani-30-ani-20-tisic-spocitali-jsme-demonstranty-proti-babisovi_1705111741_cib)
-
-![rozdílová mapa](https://www.irozhlas.cz/sites/default/files/styles/zpravy_fotogalerie_medium/public/uploader/img_3589_170511-170352_cib.jpg?itok=gFZsh1ti)
+![SZIF](img/szif_data.jpg)
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
     </script>
