@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Geomatika u piva vol. 5</title>
+    <title>Manipulace s daty - Olomouc 3. dubna 2018</title>
     <meta charset="utf-8">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono);
@@ -11,99 +11,84 @@
     </style>
   </head>
   <body>
-    <textarea id="source">
+<textarea id="source">
 
 class: center, middle
 
-# Pozemky bez vlastníků
+# Manipulace s daty
 
 ![logo iROZHLAS.cz](img/logo.jpg)
 
 ### Jan Cibulka, [@jancibulka](https://twitter.com/jancibulka)
----
 
-# Kam jdou zemědělské dotace?
-
-Vloni [130 miliard Kč](https://www.novinky.cz/ekonomika/431036-dotace-a-velke-zisky-ceske-zemedelstvi-zaziva-zlate-casy.html).
-
-Zveřejňují se jen [poslední dva roky](https://www.szif.cz/cs/seznam-prijemcu-dotaci) (starší _se z webu mažou_), a chybí propojení pěnez a konkrétní půdy.
-
-A ne všichni hrajou fér, např. [Sklízel dotace na cizí pozemky. Vlastník mlčel, hájí se úředníci](https://www.novinky.cz/domaci/414457-sklizel-dotace-na-cizi-pozemky-vlastnik-mlcel-haji-se-urednici.html)
----
-
-# Proč zrovna Agrofert?
-
-Modelový případ:
-  * Je velký (asi [3 % půdy ČR](https://cs.wikipedia.org/wiki/Agrofert)), může jít o dost peněz.
-  * [~~Vlastní~~](https://ekonomika.idnes.cz/babis-akcie-sverenske-fondy-dfv-/ekonomika.aspx?c=A170203_122224_ekonomika_jj) ho exministr financí, premiér, majitel velkého vydavatelství, miliardář. A [exagent StB](https://zpravy.idnes.cz/andrej-babis-ustav-pameti-naroda-stb-d7j-/zahranicni.aspx?c=A171012_092835_zahranicni_jj).
-  * I neúplné veřejné evidentce u holdingu [evidují](https://dotacni-parazit.cz/konsolidace-holdingy/detail/18) přes 3 mld. Kč dotací.
-
-Existuje tedy __silný veřejný zájem__ to zkontrolovat.
----
-
-# Co je Agrofert?
-
-_přes 250 firem_
-
-[79 firem v obchodním rejstříku, kde je uvedený Agrofert jako statutár](https://or.justice.cz/ias/ui/rejstrik-$spolecnici?p%3A%3Asubmit=x&.%2Frejstrik-%24spolecnici=&nazev=&ico=26185610&obec=&ulice=&polozek=500&typHledani=STARTS_WITH&jenPlatne=PLATNE)
-
-Konsolidace je ale hlavně [ruční práce](https://dotacni-parazit.cz/konsolidace-holdingy/detail/18).
----
-
-# LPIS (má [opendata](http://eagri.cz/public/app/eagriapp/lpisdata/))
-
-![lpis](img/lpis.jpg)
-
-Z XML exportů lze vyčíst (kromě jiného) hospodařící subjekt a geometrie _půdních bloků_.
----
-
-# Katastr (má [RÚIAN](http://vdp.cuzk.cz/vdp/ruian/vymennyformat/vyhledej))
-
-Překrytím katastru půdními bloky získáme parcely ve správě jednotlivých společností holdingu.
-
-![pozemky Agrofert](img/pozemky_afert.jpg)
----
-
-# Čí jsou ty pozemky? Nevíme :(
-
-Ale víme, čí pozemky [_nejsou ničí_](https://www.uzsvm.cz/nedostatecne-urcite-identifikovani-vlastnici-2138-0-85/) 
-
-![pozemky Agrofert](img/pozemky_afert.jpg)
+[http://datastory.cz/manipulace-ol-18/](http://datastory.cz/manipulace-ol-18/)
 
 ---
+# Základy
 
-# Novinařina
+[Slajdy](img/manipulace-kisk-2017.pdf) laskavě zapůjčil [Honza Pospíšil z KISKu](https://kisk.phil.muni.cz/cs/osoba/3557) 
 
-Ptáme se právníků, zemědělců, Agrofertu, dalších zemědělců, dalších právníků, objíždíme některé podniky v holdingu. Jde o 1 700 ha, v dotacích asi 10 milionů ročně.
-
-![pkolaz](img/kolaz.jpg)
-
-[Agrofert neoprávněně hospodaří na 1700 hektarech...](https://www.irozhlas.cz/zpravy-domov/agrofert-dotace-holding-zemedelstvi-puda_1711280600_jra)
-
-[Hlídáme státu peníze...](https://www.irozhlas.cz/komentare/agrofert-dotace-zemedelska-puda-podvod_1711280700_cib)
+![Posp](https://kisk.phil.muni.cz/website/var/tmp/image-thumbnails/0/596/thumb__PersonPhotoBig/jan_pospisil.jpeg)
 ---
+### Ambiciózní manipulace - vědecký cargo kult
 
-# ...poločas...
+_[...] zkoumaná populace je shodná s cílovou, nedává použití inferenčních statistik typu Chí-kvadrátu či F-testu smysl, protože výsledek není dále zobecňován na základní (cílovou) populaci. Interpretace hodnot pocházejících z těchto statistických operací jsou tak v rámci analýzy spíše matoucí a komplikující porozumění základním deskriptivním údajům [...]_
 
-![PL Kňourek](img/dozvuky_kol.jpg)
+Zdroj: [mediar.cz](https://www.mediar.cz/sociologove-nesouhlasi-s-kreckovou-kritikou-ct/)
 
-[Politicky nekorektní mediální radní promluvil](https://www.parlamentnilisty.cz/arena/monitor/To-co-minuly-tyden-predvedli-investigativci-Ceskeho-rozhlasu-Pry-na-tom-delali-nekolik-tydnu-A-ta-nahoda-kdy-to-zverejnili-Politicky-nekorektni-medialni-radni-promluvil-514703)
-
-[Deset šéfredaktorů se zastalo Janka Kroupy, řediteli ČRo poslali otevřený dopis](https://echo24.cz/a/SZBAT/deset-sefredaktoru-se-zastalo-janka-kroupy-rediteli-cro-poslali-otevreny-dopis)
-
-[Šéfredaktoři píší řediteli ČRo...](https://www.mediaguru.cz/clanky/2017/12/sefredaktori-pisi-rediteli-cro-v-kauze-janka-kroupy/)
 ---
+### Vědecký cargo kult - ohromujem čtenáře
 
-# A co dál?
+_[...] korelační koeficient 0.3 naznačuje vztah mezi počtem domů bez kanalizace a volebními výsledky partaje Naštvaní [...]_
 
-SZIF začíná poskytovat [data](https://dotacni-parazit.cz/program-rozvoje-venkova), dokonce i informace o čerpaných dotacích na konkrétní plochu. Průzkum pokračuje ;)
+[Simulátor korelací](https://shiny.rit.albany.edu/stat/corrsim/)
 
-![SZIF](img/szif_data.jpg)
-    </textarea>
-    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
-    </script>
-    <script>
-      var slideshow = remark.create();
-    </script>
+---
+### Máme vědeckou metodu!
+
+_V Česku se zneužívají sociální dávky a stát by měl v této věci zasáhnout. Vyplývá to z bleskového průzkumu serveru ZDROJ.CZ a společnosti IPSOS._
+
+Zdroj: [zdroj.cz](http://zdroj.cz/exkluzivni-pruzkum-zdroje-drtive-vetsine-cechu-vadi-zneuzivani-davek)
+
+---
+### Citujem vědu
+
+Používátě v článku odkaz na vědecký paper?
+  - četli jste víc než abstrakt?
+  - fakt jste to pochopili správně? Opravdu?
+  - má možnost si ho přečíst i čtenář? [sci-hub.tw](https://sci-hub.tw/)... ;)
+
+_The European Scientific Journal, a peer-reviewed academic publication, concluded that the collapse of the Twin Towers and World Trade Center Building 7 on 11 September 2001 was the result of a controlled demolition._ 
+
+Zdroj: [snopes.com](https://www.snopes.com/fact-check/journal-endorses-911-conspiracy-theory/)
+
+---
+# Manipuluj jako profík...
+
+![fraud](img/fraud.jpg)
+
+---
+# ...je to nejlepší
+
+![nofraud](img/nofraud.jpg)
+
+
+---
+## Četba
+
+Shrnuté na Wiki pod heslem [https://en.wikipedia.org/wiki/Misleading_graph](https://en.wikipedia.org/wiki/Misleading_graph)
+
+**How to lie with statistics**, _Darrell Huff; Irving Geis_, 1954 (vyšla i česky, ale možno [upirátit](http://gen.lib.rus.ec/))
+
+**How to lie with maps**, _Mark S Monmonier_, 2018 (možno, ehm...)
+
+A otázky ohledně tematických map konzultujte s [**Alenou Vondrákovou**](http://www.geoinformatics.upol.cz/member/alena-vondrakova) z PřF UPOL
+
+Případně pište (dotazy, stáž...) na [jan.cibulka@rozhlas.cz](mailto:jan.cibulka@rozhlas.cz)
+</textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>
+  var slideshow = remark.create();
+</script>
   </body>
 </html>
